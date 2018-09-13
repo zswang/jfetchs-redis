@@ -36,8 +36,8 @@ export interface IRedisStoreOptions {
 }
 
 export class RedisStore<T> implements ICacheStore<T> {
-  options: IRedisStoreOptions
-  redisClient: redis.RedisClient
+  private options: IRedisStoreOptions
+  private redisClient: redis.RedisClient
   constructor(options: IRedisStoreOptions) {
     this.options = {
       prefix: 'jfetchs:store',

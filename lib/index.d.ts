@@ -6,7 +6,7 @@ import * as redis from 'redis';
  * jfetchs redis store
  * @author
  *   zswang (http://weibo.com/zswang)
- * @version 0.0.1
+ * @version 0.0.2
  * @date 2018-09-13
  */
 export interface IRedisStoreOptions {
@@ -24,8 +24,8 @@ export interface IRedisStoreOptions {
     debug?: boolean | string;
 }
 export declare class RedisStore<T> implements ICacheStore<T> {
-    options: IRedisStoreOptions;
-    redisClient: redis.RedisClient;
+//     private options;
+//     private redisClient;
     constructor(options: IRedisStoreOptions);
     /**
      * 加载缓存数据 load data from cache
